@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>UiSmoke</AssemblyName>
+    <RootNamespace>Kinect2VMC.UiSmoke</RootNamespace>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- Named in reports produced by this test host. -->
+    <Version>1.0.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyTitle>Kinect2VMC UiSmoke</AssemblyTitle>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugType>none</DebugType>
+    <NoWarn>MSB3270;CS0618</NoWarn>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Needed so the SDK surface audit can reflect over, and reference, the real Kinect types. -->
+    <Reference Include="Microsoft.Kinect">
+      <HintPath>C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Assemblies\Microsoft.Kinect.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App\Kinect2VMC.App.csproj" />
+    <ProjectReference Include="..\SelfTest\SelfTest.csproj" />
+  </ItemGroup>
+
+</Project>

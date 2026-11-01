@@ -1,0 +1,42 @@
+# ---- Build output ----
+dist/
+bin/
+obj/
+*.user
+*.suo
+
+# ---- Local documentation (not part of the public repo) ----
+docs/
+
+# ---- Third-party upstream / vendored ----
+VirtualMotionCapture-master/
+
+# ---- Plugin backups ----
+warudo-mod/backup/
+
+# ---- Backups / scratch ----
+*.bak
+*.orig
+*.rej
+
+# ---- One-off debug / probe scripts (not product code) ----
+tools/axis_probe.py
+tools/bone_probe_send.py
+tools/make_approx_poses.py
+tools/send_probe.ps1
+tools/test_hand_tracker.py
+tools/try_axes.py
+tools/try_hand_dirs.py
+tools/poses-approx.json
+tools/r_black.txt
+tools/r_shown.txt
+
+# ---- Python ----
+__pycache__/
+*.pyc
+tools/models/
+
+# ---- Local settings / runtime ----
+*.csv
+*.log
+*.pid
